@@ -1,0 +1,18 @@
+{
+	"name": "dimadin/wis-wp-theme",
+	"description": "WIS WP Theme",
+	"keywords": ["weather"],
+	"type": "wordpress-theme",
+	"license": "GPL",
+	"authors": [
+		{
+			"name": "Milan Dinić",
+			"email": "milan@srpski.biz",
+			"homepage": "http://blog.milandinic.com/"
+		}
+	],
+	"require": {
+		"composer/installers": "~1.0",
+		"dimadin/wis-jsx": "dev-master"
+	}
+}
