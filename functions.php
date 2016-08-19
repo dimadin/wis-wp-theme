@@ -14,18 +14,21 @@ function wis_wp_theme_enqueue() {
 	$suffix = ( defined( 'SCRIPT_DEBUG' ) && SCRIPT_DEBUG ) ? '' : '.min';
 
 	// Add Bootstrap files
-	wp_enqueue_style( 'bootstrap', 'https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.6/css/bootstrap' . $suffix . '.css', array(), null );
-	wp_enqueue_script( 'bootstrap', 'https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.6/js/bootstrap' . $suffix . '.js', array( 'jquery-core' ), null, true );
+	wp_enqueue_style( 'bootstrap', 'https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/css/bootstrap' . $suffix . '.css', array(), null );
+	wp_enqueue_script( 'bootstrap', 'https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/js/bootstrap' . $suffix . '.js', array( 'jquery-core' ), null, true );
 
 	// Add React files
-	wp_enqueue_script( 'react', 'https://cdnjs.cloudflare.com/ajax/libs/react/0.14.3/react' . $suffix . '.js', array(), null );
-	wp_enqueue_script( 'react-dom', 'https://cdnjs.cloudflare.com/ajax/libs/react/0.14.3/react-dom' . $suffix . '.js', array( 'react' ), null );
+	wp_enqueue_script( 'react', 'https://cdnjs.cloudflare.com/ajax/libs/react/15.3.0/react' . $suffix . '.js', array(), null );
+	wp_enqueue_script( 'react-dom', 'https://cdnjs.cloudflare.com/ajax/libs/react/15.3.0/react-dom' . $suffix . '.js', array( 'react' ), null );
+
+	// Add React Router file
+	wp_enqueue_script( 'react-router', 'https://cdnjs.cloudflare.com/ajax/libs/react-router/2.6.1/ReactRouter' . $suffix . '.js', array( 'react' ), null );
 
 	// Add Babel file
 	wp_enqueue_script( 'babel', 'https://cdnjs.cloudflare.com/ajax/libs/babel-core/5.8.34/browser' . $suffix . '.js', array(), null );
 
 	// Add JSX file
-	wp_enqueue_script( 'wis-jsx', get_stylesheet_directory_uri() . '/vendor/dimadin/wis-jsx/wis-jsx.js', array( 'react', 'react-dom', 'babel', 'jquery-core' ), '0.1-beta-4' );
+	wp_enqueue_script( 'wis-jsx', get_stylesheet_directory_uri() . '/vendor/dimadin/wis-jsx/wis-jsx.js', array( 'react', 'react-dom', 'babel', 'jquery-core' ), '2.0-beta-1' );
 
 	// Add endpoint base to be used by JSX file
 	wp_localize_script( 'wis-jsx', 'wisJSX', array(
