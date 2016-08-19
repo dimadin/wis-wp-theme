@@ -54,3 +54,24 @@ function wis_wp_theme_script_loader_tag( $tag, $handle, $src ) {
 	return $tag;
 }
 add_filter( 'script_loader_tag', 'wis_wp_theme_script_loader_tag', 10, 3 );
+
+/**
+ * Set list of paths used by WIS.
+ *
+ * @return array $paths List of WIS paths.
+ */
+function wis_wp_theme_allowed_paths() {
+	return [ 'radar', 'satellite', 'lightning', 'forecast' ];
+}
+
+/**
+ * Create virtual post for WIS paths when there is no database content.
+ *
+ * @param WP $wp Current WordPress environment instance.
+ */
+function wis_wp_theme_maybe_no_404( $wp ) {
+	if ( in_array( $wp->request, wis_wp_theme_allowed_paths() ) ) {
+		$v = new WP_Virtual_Posts( [ [ 'post_name' => $wp->request ] ], [ 'is_singular' => false, 'is_page' => false ] );
+	}
+}
+add_action( 'parse_request', 'wis_wp_theme_maybe_no_404' );
