@@ -13,6 +13,7 @@
 	],
 	"require": {
 		"composer/installers": "~1.0",
-		"dimadin/wis-jsx": "dev-master"
+		"dimadin/wis-jsx": "dev-master",
+		"dimadin/wp-virtual-posts": "dev-master"
 	}
 }

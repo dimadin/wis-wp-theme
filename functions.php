@@ -3,6 +3,12 @@
  * WIS WP Theme functions and definitions.
  */
 
+ // Load dependencies
+ if ( file_exists( __DIR__ . '/vendor/autoload.php' ) ) {
+ 	require __DIR__ . '/vendor/autoload.php';
+ }
+
+
 /**
  * Enqueue scripts and styles.
  */
