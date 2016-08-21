@@ -73,6 +73,9 @@ function wis_wp_theme_allowed_paths() {
 function wis_wp_theme_maybe_no_404( $wp ) {
 	if ( in_array( $wp->request, wis_wp_theme_allowed_paths() ) ) {
 		$v = new WP_Virtual_Posts( [ [ 'post_name' => $wp->request ] ], [ 'is_singular' => false, 'is_page' => false ] );
+
+		// Robots still shouldn't index this path
+		add_action( 'wp_head', 'wp_no_robots' );
 	}
 }
 add_action( 'parse_request', 'wis_wp_theme_maybe_no_404' );
