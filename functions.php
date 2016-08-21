@@ -34,7 +34,8 @@ function wis_wp_theme_enqueue() {
 	wp_enqueue_script( 'babel', 'https://cdnjs.cloudflare.com/ajax/libs/babel-core/5.8.34/browser' . $suffix . '.js', array(), null );
 
 	// Add JSX file
-	wp_enqueue_script( 'wis-jsx', get_stylesheet_directory_uri() . '/vendor/dimadin/wis-jsx/wis-jsx.js', array( 'react', 'react-dom', 'babel', 'jquery-core' ), '2.0-beta-1' );
+	$jsx_path = '/vendor/dimadin/wis-jsx/wis-jsx.js';
+	wp_enqueue_script( 'wis-jsx', get_stylesheet_directory_uri() . $jsx_path, array( 'react', 'react-dom', 'babel', 'jquery-core' ), filemtime( get_stylesheet_directory() . $jsx_path ) );
 
 	// Add endpoint base to be used by JSX file
 	wp_localize_script( 'wis-jsx', 'wisJSX', array(
