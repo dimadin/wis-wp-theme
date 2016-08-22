@@ -32,6 +32,20 @@
 	</head>
 
 	<body <?php body_class(); ?>>
+		<noscript>
+			<div class="container">
+				<div class="row">
+					<div class="col-xs-12">
+						<div class="jumbotron">
+							<p>
+								Не можете да прегледате ову страницу зато што је јаваскрипт онемогућен.
+							</p>
+						</div>
+					</div>
+				</div>
+			</div>
+		</noscript>
+
 		<div id="wis-content"></div>
 		<?php wp_footer(); ?>
 	</body>
