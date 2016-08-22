@@ -32,18 +32,7 @@
 	</head>
 
 	<body <?php body_class(); ?>>
-		<div id="container">
-			<div id="content">
-				<div class="container">
-					<div class="row">
-						<div class="col-xs-12">
-							<div id="wis-content">
-							</div><!-- #wis-content -->
-						</div><!-- .col-xs-12 -->
-					</div><!-- .row -->
-				</div><!-- .container -->
-			</div><!-- #content -->
-		</div><!-- #container -->
+		<div id="wis-content"></div>
 		<?php wp_footer(); ?>
 	</body>
 </html>
