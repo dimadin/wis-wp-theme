@@ -62,7 +62,7 @@ add_filter( 'script_loader_tag', 'wis_wp_theme_script_loader_tag', 10, 3 );
  * @return array $paths List of WIS paths.
  */
 function wis_wp_theme_allowed_paths() {
-	return [ 'radar', 'satellite', 'lightning', 'forecast' ];
+	return [ 'radar', 'satellite', 'lightning', 'animated', 'forecast' ];
 }
 
 /**
