@@ -20,18 +20,18 @@ function wis_wp_theme_enqueue() {
 	$suffix = ( defined( 'SCRIPT_DEBUG' ) && SCRIPT_DEBUG ) ? '' : '.min';
 
 	// Add Bootstrap files
-	wp_enqueue_style( 'bootstrap', 'https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/css/bootstrap' . $suffix . '.css', array(), null );
-	wp_enqueue_script( 'bootstrap', 'https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/js/bootstrap' . $suffix . '.js', array( 'jquery-core' ), null, true );
+	wp_enqueue_style( 'bootstrap', 'https://cdn.jsdelivr.net/npm/bootstrap@3.3.7/dist/css/bootstrap' . $suffix . '.css', array(), null );
+	wp_enqueue_script( 'bootstrap', 'https://cdn.jsdelivr.net/npm/bootstrap@3.3.7/dist/js/bootstrap' . $suffix . '.js', array( 'jquery-core' ), null, true );
 
 	// Add React files
-	wp_enqueue_script( 'react', 'https://cdnjs.cloudflare.com/ajax/libs/react/15.3.0/react' . $suffix . '.js', array(), null );
-	wp_enqueue_script( 'react-dom', 'https://cdnjs.cloudflare.com/ajax/libs/react/15.3.0/react-dom' . $suffix . '.js', array( 'react' ), null );
+	wp_enqueue_script( 'react', 'https://cdn.jsdelivr.net/npm/react@15.3.0/dist/react' . $suffix . '.js', array(), null );
+	wp_enqueue_script( 'react-dom', 'https://cdn.jsdelivr.net/npm/react-dom@15.3.0/dist/react-dom' . $suffix . '.js', array( 'react' ), null );
 
 	// Add React Router file
-	wp_enqueue_script( 'react-router', 'https://cdnjs.cloudflare.com/ajax/libs/react-router/2.6.1/ReactRouter' . $suffix . '.js', array( 'react' ), null );
+	wp_enqueue_script( 'react-router', 'https://cdn.jsdelivr.net/npm/react-router@2.6.1/umd/ReactRouter' . $suffix . '.js', array( 'react' ), null );
 
 	// Add Babel file
-	wp_enqueue_script( 'babel', 'https://cdnjs.cloudflare.com/ajax/libs/babel-core/5.8.34/browser' . $suffix . '.js', array(), null );
+	wp_enqueue_script( 'babel', 'https://cdn.jsdelivr.net/npm/babel-core@5.8.34/browser' . $suffix . '.js', array(), null );
 
 	// Add JSX file
 	$jsx_path = '/vendor/dimadin/wis-jsx/wis-jsx.js';
